@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -12,7 +13,7 @@ SECRET_KEY = "ri*kwk$h3!5lq%e-bs!ry$j7abet%py4a$do&xhjty00ewpmqb"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -67,10 +69,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "newshere",
-        "USER": "postgres",
-        "PASSWORD": "1tuv3jkl9wxyz",
+        "USER": "tar",
+        "PASSWORD": "12345678",
         "HOST": "localhost",
-        "PORT": "5432",
+        "PORT": 5432,
     }
 }
 
@@ -109,7 +111,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 STATIC_URL = "/static/"
+MEDIA_URL = "/images/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
+
 
 CRONJOBS = [("0 0 * * *", "news.cron.reset_upvotes")]
 

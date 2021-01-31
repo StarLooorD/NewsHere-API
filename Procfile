@@ -1,0 +1,1 @@
+web: gunicorn NewsHere.wsgi --log-file -
