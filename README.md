@@ -41,7 +41,7 @@ https://newsheartx.herokuapp.com/api/v1/news/posts/
 
 https://documenter.getpostman.com/view/9281520/TW6zFSaL
 
-Choose there NewsHereEnv as environment, and you are ready to use it.
+Choose there NewsHereEnv as environment, to use exisitng Postman Variables for convinience.
 
 ### Main endpoints:
 
