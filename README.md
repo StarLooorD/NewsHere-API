@@ -65,7 +65,7 @@ Choose there NewsHereEnv as environment, and you are ready to use it.
 
 9. Get all comments -> method: GET `https://newsheartx.herokuapp.com/api/v1/news/comments/`;
 
-10. Create new comment -> method: POST `https://newsheartx.herokuapp.com/api/v1/news/comment/`;
+10. Create new comment -> method: POST `https://newsheartx.herokuapp.com/api/v1/news/comments/`;
 
 11. Update comment by id -> method: PUT `https://newsheartx.herokuapp.com/api/v1/news/comment/<comment_id>/`;
 
